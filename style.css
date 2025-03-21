@@ -178,7 +178,7 @@ body {
 }
 
 .panel1 {
-  background-image: url('/images/9.jpg');
+  background-image: url('./images/9.jpg');
 }
 
 .panel2 {
