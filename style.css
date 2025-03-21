@@ -1,0 +1,359 @@
+body {
+  background-image: url(./images/background6.avif);
+  background-size: contain;
+  overflow-x: hidden;
+}
+
+#mainNav {
+  width: 100%; 
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  -webkit-background-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18); 
+  padding: 10px 0;
+  transition: transform 0.5s ease, opacity 0.5s ease; 
+}
+
+#mainNav ul {
+  display: flex; 
+  justify-content: space-around; 
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+}
+
+#mainNav ul li {
+  flex: 1; 
+  text-align: center;
+}
+
+#mainNav ul li a {
+  text-decoration: none; 
+  color: wheat; 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em; 
+  display: block;
+  padding: 10px;
+}
+
+#navToggle {
+  display: none; 
+  position: fixed; 
+  top: 10px;
+  right: 20px; 
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  -webkit-background-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: wheat;
+  border: none;
+  padding: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+  z-index: 1000; 
+  transition: opacity 0.3s ease;
+}
+
+#mainNav.hidden {
+  opacity: 0; 
+  transform: scale(0.1);
+  transform-origin: top right; 
+  pointer-events: none; 
+}
+
+#mainNav.column {
+  position: fixed; 
+  top: 0;
+  right: 0;
+  width: 20%; 
+  height: fit-content; 
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  -webkit-background-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: transform 0.5s ease, opacity 0.5s ease; 
+  z-index: 999; 
+  transform-origin: top right; 
+}
+
+#mainNav.column ul {
+  flex-direction: column; 
+  gap: 10px; 
+  padding: 20px; 
+  margin-top: 50px; 
+}
+
+#about {
+  height: 100vh;
+  padding: 100px;
+}
+
+.doctor {
+  height: 150px;
+  width: 90%;
+  padding-left: 10px;
+}
+
+.doctor h1 {
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+  color: rgb(83, 36, 126);
+  font-size: 80px;
+}
+
+.tardis3d {
+  width: 40%;
+  height: 60vh; 
+  position: absolute;
+  padding-left: 150px;
+  right: -5%;
+  top: 15%;
+  margin-top: 6%;
+}
+
+.aboutDoctor {
+  height: fit-content;
+  width: 550px;
+  border-radius: 5%;
+  background-color: rgba(102, 73, 169, 0.184);
+  padding: 20px;
+  margin-left: 310px;
+  margin-top: -160px;
+}
+
+.aboutDoctor p {
+  font-family: "Caveat", cursive;
+  font-size: 20px;
+  margin: 0;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.679);
+  text-align: left;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.topicDoctors h2 {
+  font-size: 40px;
+  color: #fff;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.panel {
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5; 
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0; 
+}
+
+.panel.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+.panel1 {
+  background-image: url('/images/9.jpg');
+}
+
+.panel2 {
+  background-image: url('./images/10.avif');
+}
+
+.panel3 {
+  background-image: url('./images/11.avif');
+}
+
+.panel4 {
+  background-image: url('./images/12.jpg');
+}
+
+.panel5 {
+  background-image: url('./images/13.webp');
+}
+
+.panel6 {
+  background-image: url('./images/14.avif');
+}
+
+@media(max-width:480px) {
+  .container {
+    width: 100vw;
+  }
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
+
+#enemies {
+  display: flex;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  position: relative;
+  margin-right: 50px;
+}
+
+.topicEnemies {
+  position: absolute; 
+  top: 20px; 
+  margin-left: 50px;
+  color: #fff;
+  width: 100%; 
+  text-align: left;
+  font-size: 30px; 
+}
+
+.enemyContainer {
+  width: 25%;
+  min-width: 300px;
+  perspective: 1000px;
+}
+
+.enemyBox {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+}
+
+.enemyText, .enemyModel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(102, 73, 169, 0.184);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  color: #fff;
+}
+
+.enemyModel {
+  transform: rotateY(180deg);
+}
+
+.enemyBox:hover {
+  transform: rotateY(180deg);
+}
+
+#companions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.companionsContainer {
+  display: flex;
+  width: 90%;
+  height: 80%;
+  max-width: 1200px;
+}
+
+.gallery {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.galleryImages {
+  height: 500px;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory ;
+  scroll-behavior: smooth;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.galleryImages img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  scroll-snap-align: start;
+}
+
+.galleryImages img:hover {
+  transform: scale(1.05);
+}
+
+.scrollBtn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: wheat;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  transition: background 0.3s ease;
+  border-radius: 10px;
+}
+
+.scrollBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.companionInfo {
+  width: 70%;
+  height: 520px;
+  padding: 20px;
+  background: rgba(102, 73, 169, 0.184);
+  border-radius: 10px;
+  margin-left: 20px;
+  overflow-y: auto;
+  color: #fff;
+}
+
+.companionInfo .info {
+  display: none;
+}
+
+.companionInfo .info.active {
+  display: block;
+}

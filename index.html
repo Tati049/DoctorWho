@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Who by Horiana Tetiana</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+
+<body>
+  
+  <nav id="mainNav">
+    <ul>
+      <li><a href="#about">Who?</a></li>
+      <li><a href="#doctors">Doctors</a></li>
+      <li><a href="#enemies">Enemies</a></li>
+      <li><a href="#companions">Companions</a></li>
+    </ul>
+  </nav>
+  <button id="navToggle">☰</button> <!-- Toggle button -->
+
+  <section id="about">
+   <div class="doctor">
+       <h1>WHO<br> IS <br>THE <br>DOCTOR<br></h1>
+   </div>
+     <div class="aboutDoctor"><p>The Doctor is the central character in the long-running British science fiction television series "Doctor Who." The character is a Time Lord, a humanoid alien with the ability to travel through time and space in the TARDIS, a time machine disguised as a British police box. The Doctor is usually depicted as an eccentric, intelligent, and compassionate individual who travels the universe, helping people, righting wrongs, and facing various adversaries, often saving civilizations along the way. The Doctor is known for their ability to regenerate into a new form when mortally wounded, allowing for different actors to portray the character over the show's history.</p></div>
+ 
+    <!-- 3D модель TARDIS -->
+     <model-viewer 
+     src="./models/tardis.glb"
+      alt="3D модель TARDIS"
+       auto-rotate 
+       camera-controls
+           class="tardis3d">
+    </model-viewer>
+  </section>
+
+ <section id="doctors">
+  <div class="topicDoctors"><h2>Doctors? Yep there more than one</h2></div>
+  <div class="container">
+    <div class="panel panel1 active">
+      <h3>Ninth Doctor</h3>
+    </div>
+    <div class="panel panel2">
+      <h3>Tenth Doctor</h3>
+    </div>
+    <div class="panel panel3">
+      <h3>Eleventh Doctor</h3>
+    </div>
+    <div class="panel panel4">
+      <h3>Twelfth Doctor</h3>
+    </div>
+    <div class="panel panel5">
+      <h3>Thirteenth Doctor</h3>
+    </div>
+    <div class="panel panel6">
+      <h3>Fourteenth Doctor</h3>
+    </div>
+  </div>    
+</section>
+
+<section id="enemies">
+  <span class="topicEnemies"><h2>Enemies</h2></span>
+  <div class="enemyContainer">
+    <div class="enemyBox" id="daleksBox">
+      <div class="enemyText">
+        <h2>The Daleks</h2>
+        <p>The Daleks were a warrior race made up of genetically engineered mutants belonging to fundamental DNA type 467-989. 
+          By most accounts they were originally from the planet Skaro. Their goal was to eradicate all non-Dalek life, as 
+          programmed by their creator.</p>
+      </div>
+      <model-viewer 
+        src="./models/bronze_new_series_dalek_-_rigged.glb"
+        alt="3D model dalek"
+        camera-controls
+        class="enemyModel">
+      </model-viewer>
+    </div>
+  </div>
+
+  <div class="enemyContainer">
+    <div class="enemyBox" id="cybermenBox">
+      <div class="enemyText">
+        <h2>Cyberman</h2>
+        <p>The Cybermen were a "race" of cybernetically augmented humanoids. almost all Cybermen lacked emotions, as they considered them
+          to be a weakness and instead embraced pure logic, they were often born out of a human civilisation's, or an individual's. 
+          Their goal is assimilate all people</p>
+      </div>
+      <model-viewer 
+        src="./models/cyberman.glb"
+        alt="3D model cyberman"
+        camera-controls
+        class="enemyModel">
+      </model-viewer>
+    </div>
+  </div>
+
+  <div class="enemyContainer">
+    <div class="enemyBox" id="silenceBox">
+      <div class="enemyText">
+        <h2>Silence</h2>
+        <p>The Silence, known singularly as a Silentand formerly known as the Confessional Priests of the Papal 
+          Mainframe, were genetically engineered by the Church to allow people to confess their sins without
+           remembering doing so, accomplished by fashioning the Priests so anyone looking at them would forget
+            their encounter when they looked away</p>
+      </div>
+      <model-viewer 
+        src="./models/silence_doctor_who.glb"
+        alt="3D model silence"
+        camera-controls
+        class="enemyModel">
+      </model-viewer>
+    </div>
+  </div>
+</section>
+
+<section id="companions">
+  <div class="companionsContainer">
+    <!-- Галерея зліва -->
+    <div class="gallery">
+      <button class="scrollBtn up" onclick="scrollGallery(-1)">↑</button>
+      <div class="galleryImages">
+        <img src="./images/rose2.avif" alt="Rose Tyler" onclick="showCompanionInfo('rose')">
+        <img src="./images/martha-series-4-tdd (1).jpg" alt="Martha Jones" onclick="showCompanionInfo('martha')">
+        <img src="./images/donna (1).jpg" alt="Donna Noble" onclick="showCompanionInfo('donna')">
+        <img src="./images/amy.jpg" alt="Amy Pond" onclick="showCompanionInfo('amy')">
+        <img src="./images/Doctor-Who-Jenna-Coleman-5d800cd.webp" alt="Clara Oswald" onclick="showCompanionInfo('clara')">
+        <img src="./images/Bill-Potts.webp" alt="Bill Potts" onclick="showCompanionInfo('bill')">
+      </div>
+      <button class="scrollBtn down" onclick="scrollGallery(1)">↓</button>
+    </div>
+
+    <!-- Інформація справа -->
+    <div class="companionInfo">
+      <div id="rose" class="info">
+        <h2>Rose Tyler</h2>
+        <p>Rose travels with the Ninth Doctor on multiple adventures until a battle with the Daleks saw her absorb the power of the Time Vortex and emerge with her "Bad Wolf" persona until the Doctor saves her life by absorbing the fatal level of energy flowing through her.</p>
+        <p>The subsequent regeneration of the Ninth Doctor into the Tenth Doctor (David Tennant) only brings the pair closer together and they form a romantic connection.</p>
+        <p>In the 2006 episode Doomsday, Rose is separated from the Doctor when she is trapped in a parallel universe, leading to a tragic goodbye.</p>
+      </div>
+      <div id="martha" class="info" style="display: none;">
+        <h2>Martha Jones</h2>
+        <p>The 2007 episode Smith and Jones saw the Doctor meet another doctor, human doctor Martha Jones. After helping return a hospital to Earth, Martha joined the Doctor on his travels and went on to save her family, the Doctor, and the world herself from the Master.</p>
+        <p>At the conclusion of the 2007 season, Martha's unrequited love for the Doctor became too painful as she felt she could never compare in his mind to Rose. Martha chose to return to her life on Earth.</p>
+      </div>
+      <div id="donna" class="info" style="display: none;">
+        <h2>Donna Noble</h2>
+        <p>Introduced in the final scene of the 2006 episode Doomsday, the loud-mouthed temp worker Donna Noble became the companion of the Tenth Doctor in the Christmas special later that year as she was the titular 'Runaway Bride.'</p>
+        <p>At the end of this festive adventure, Donna declined to join the Doctor in the TARDIS as he still grieved the loss of Rose.</p>
+        <p>However, Donna later regretted this decision and sought out the Doctor, being reunited with him in the 2008 series which saw her become his companion full-time and also his best friend.</p>
+        <p>Donna finally found some self-esteem and self-value in her travels with the Doctor but soon became the key to saving the universe when she saved it by bringing about a Time Lord-human "meta-crisis" when she bonded with the Doctor's regenerating hand.</p>
+        <p>Despite saving all universes, Donna's brain could not handle Time Lord information and the only way the Doctor could prevent her brain "burning up" was to wipe her mind of memories of their travels and she departed the show in the 2008 series' finale, Journey's End.</p>
+      </div>
+      <div id="amy" class="info" style="display: none;">
+        <h2>Amy Pond</h2>
+        <p>Introduced in the 2010 episode The Eleventh Hour, Amelia Pond is a young orphan who was the first person that the Eleventh Doctor (Matt Smith) met and promised to travel with. Amelia waited when he left but he never returned - at least not until she was a feisty grown woman.</p>
+        <p>Amy then went on to travel with the Doctor and later was accompanied by her boyfriend-turned-husband Rory Williams. They later discovered that Amy had a child named Melody Pond who eventually turned out to be the time-traveller River Song.</p>
+        <p>Amy and Rory later left the Doctor on multiple occasions but parted ways with him for the final time in the 2012 episode The Angels Take Manhattan when Rory was transported into the past by a Weeping Angel and Amy emotionally elects to join him, knowing they are forced to stay in that fixed time period. The pair live out their days together in the past.</p>
+      </div>
+      <div id="clara" class="info" style="display: none;">
+        <h2>Clara Oswald</h2>
+        <p>Clara appeared in several episodes as different characters whom the doctor could not save, but before death, all Clara's variations spoke the same words.</p>
+        <p>As it turned out later Clara sacrifices herself to save the Doctor by entering the Doctor's timestream, causing multiple iterations of Clara to appear throughout the Doctor's life and saving him on numerous occasions. The Doctor later saves her and restores her to life.</p>
+        <p>Clara develops a romantic chemistry with the Doctor and is with him when he regenerates into the Twelfth Doctor (Peter Capaldi), whom she is initially suspicious of. Despite this, and numerous difficulties in their relationship due to moral quandaries and the death of her boyfriend Danny Pink, Clara remains by the Doctor's side until her death in the 2015 episode Face the Raven.</p>
+        <p>However, the 2015 season finale Hell Bent sees the Doctor use Gallifreyan technology to extract Clara from her last moments of life and help her cheat death.</p>
+        <p>However, the immortal being Ashildr (Maisie Williams) helps the Doctor realise that together he and Clara are the dangerous prophesied entity 'The Hybrid' and their partnership brings more harm than good. When the Doctor tries to wipe Clara's mind of memories of him, she reverses this to wipe his mind of her instead.</p>
+        <p>Afterwards, Clara resigns herself to returning to Gallifrey to face her death but intends to go on numerous adventures travelling time and space in a stolen TARDIS with Ashildr by her side.</p>
+      </div>
+      <div id="bill" class="info" style="display: none;">
+        <h2>Bill Potts</h2>
+        <p>Orphaned student Bill Potts is introduced in the 2017 season premiere The Pilot and swiftly becomes the companion of her university professor, The Twelfth Doctor, after losing her love interest Heather who turns into an alien puddle that can travel through space and time.</p>
+        <p>Bill joins the Doctor on his travels through time and space throughout the 2017 season until the finale World Enough and Time/The Doctor Falls when she is traumatically converted into a Cyberman.</p>
+        <p>After the Doctor appears dead, Nardole leaves to rescue human refugees and she is left in her new form, Bill is saved from despair when Heather returns and transforms her into a form like her own and Bill returns the Doctor's body to Earth, leaving to travel space and time with Heather.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <script src="script.js"></script> 
+</body>
+</html>
